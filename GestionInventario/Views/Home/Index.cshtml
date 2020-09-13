@@ -1,0 +1,39 @@
+﻿@page
+    <div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-5">
+                <form action="javascript:void(0);" method="POST" onsubmit="addElemento()">
+                    <div><input type="text" class="form-control" id="nombreAdd" placeholder="Nombre" /></div><br />
+                    <div><input type="date" class="form-control" id="caducidadAdd" placeholder="Caducidad" /></div><br />
+                    <div><select class="form-control"  name="cmbTipo" id="cmbTipo" required></select></div><br />
+                    <div><input type="submit" class="btn btn-primary" id="addButton" value="Añadir al Inventario" /></div>
+                </form>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+                <div><input type="text" class="form-control"  id="elementoInput" placeholder="Nombre" /></div><br />
+                <div><input type="button" class="btn btn-warning" id="deleteButton" value="Sacar del Inventario" /></div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+    </div>
+<div class="row">
+    <div class="col-12">
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-5">
+        <div>&nbsp;<h5>Elementos&nbsp;Caducados</h5></div>
+        <ul id="mensajeCaducado" class="list-group">
+        </ul>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-5">
+        <div>&nbsp;<h5>Baja&nbsp;del&nbsp;Inventario</h5></div>
+        <ul id="mensajeBaja" class="list-group"></ul>
+    </div>
+</div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/inventario.js"></script>
